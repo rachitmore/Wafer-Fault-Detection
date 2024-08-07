@@ -1,0 +1,27 @@
+{% extends 'home/base.html' %}
+
+{% block title %}About Me - Rachit More{% endblock %}
+
+{% block content %}
+<section class="intro">
+    <div class="about-container">
+        <div class="about-text">
+            <h2>So, who am I?</h2>
+            <p>My name is Rachit More, and my journey has been a blend of engineering precision and data-driven exploration. I graduated with a Bachelor of Engineering in Mechanical Engineering in 2020. Fresh out of college, I embarked on my professional journey as a Quality Control In-charge at Confidence Petroleum India Limited. This role, which I held for a year and a half, taught me the importance of meticulousness and quality assurance.</p>
+            
+            <p>Seeking to broaden my horizons, I moved on to Safecare Gasoline Private Limited, where I took on dual roles as a Project Engineer and continued my responsibilities in Quality Control. This period of my career was not just about managing projects and ensuring quality; it was a time of exploration. I found myself increasingly fascinated by the emerging trends and technologies that were shaping the future, particularly Data Science.</p>
+            
+            <p>The more I learned about Data Science, the more I realized its potential and the impact it could have on various industries. This realization sparked a passion in me that I could not ignore. I made the bold decision to leave my stable job and immerse myself in the world of Data Science, starting from the very basics. I enrolled in several comprehensive courses to build a strong foundation: Full Stack Data Science from iNeuron, Statistics for Data Science and Business from 360DataScience, and Python for Data Science and Machine Learning from Jose Portila.</p>
+            
+            <p>These courses were just the beginning. I interned at iNeuron, where I had the opportunity to work on open-source projects under the guidance of seasoned mentors. This hands-on experience was invaluable and helped me apply theoretical knowledge to real-world problems. After my internship, I began taking on freelance projects, allowing me to further refine my skills and gain diverse experiences in the field.</p>
+            
+            <p>Throughout this journey, I have learned that following one's passion requires courage and a willingness to start anew. My transition from mechanical engineering to Data Science has been challenging yet incredibly rewarding. I am excited about the future and eager to continue growing and contributing to this dynamic field.</p>
+            <a href="{% url 'contact' %}" class="contact-btn">Contact me</a>
+        </div>
+        <div class="about-image">
+            {% load static %}
+            <img src="{% static 'images/profile.jpg' %}" alt="Rachit More">
+        </div>
+    </div>
+</section>
+{% endblock %}

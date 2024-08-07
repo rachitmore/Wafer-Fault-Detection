@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Rachit More - Technical Support Engineer{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <h1 class="logo">Rachit More</h1>
+                <h2 class="subtitle">Technical Support Engineer</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">HOME</a></li>
+                    <li><a href="{% url 'about' %}">ABOUT ME</a></li>
+                    <li><a href="{% url 'resume' %}">RESUME</a></li> 
+                    <li><a href="{% url 'projects' %}">PROJECTS</a></li>
+                    <li><a href="{% url 'contact' %}">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer>
+            <p>&copy; 2025 by Rachit More. Powered and secured by Meta Programming Technologies</p>
+            <p>Call: +91-8517900596 | Write: rachitmore3@gmail.com</p>
+            <p>Follow: 
+                <a href="www.linkedin.com/in/rachit-more-30a63418a">LinkedIn</a> | 
+                <a href="https://github.com/rachitmore">GitHub</a> | 
+                <a href="https://x.com/RachitMore20">Twitter</a> |    
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

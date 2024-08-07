@@ -1,0 +1,134 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Projects - Rachit More{% endblock %}
+
+{% block content %}
+    <section class="projects-section">
+        <div class="projects-container">
+            <div class="header">
+                <h1>Projects</h1>
+                <p>Explore my portfolio of projects, showcasing my work in Python, Machine Learning, Computer Vision, NLP, and Unsupervised Learning.</p>
+            </div>
+
+            <div class="project">
+                <div class="project-info">
+                    <h2>Python Projects</h2>
+                    <ul>
+                        <li>
+                            <p>User Registration and Login Project</p>
+                            <a href="https://github.com/rachitmore/User-Registration-and-Login-Project" target="_blank" rel="noopener noreferrer">GitHub Link</a>
+                        </li>
+                        <li>
+                            <p>iNeuron Web Scraper Project</p>
+                            <a href="https://github.com/rachitmore/iNeuron-Web-Scraper" target="_blank" rel="noopener noreferrer">GitHub Link</a>
+                        </li>
+                        <li>
+                            <p>Chatbot Django Web Application</p>
+                            <a href="https://github.com/rachitmore/Chatbot-Django-Web-Application" target="_blank" rel="noopener noreferrer">GitHub Link</a>
+                        </li>
+                        <li>
+                            <p>Visualization on NSE Data</p>
+                            <a href="https://github.com/rachitmore/Visualization-on-NSE-Data" target="_blank" rel="noopener noreferrer">GitHub Link</a>
+                        </li>
+                        <li>
+                            <p>Task Automation Script</p>
+                            <a href="https://github.com/rachitmore/Automation-Task-by-Python" target="_blank" rel="noopener noreferrer">GitHub Link</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="project-image">
+                    {% load static %}
+                    <img src="{% static 'images/project1.jpg' %}" alt="Python Projects">
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-info">
+                    <h2>Machine Learning Projects</h2>
+                    <ul>
+                        <li>
+                            <p>Income Prediction on Adult Census Dataset</p>
+                            <a href="https://github.com/rachitmore/Income-Prediction-on-UCI-Adult-Census-Dataset" target="_blank" rel="noopener noreferrer">GitHub Link</a>
+                        </li>
+                        <li>
+                            <p>Credit Card Defaulters Prediction</p>
+                            <a href="https://github.com/rachitmore/Credit-Card-Defaulters-Prediction" target="_blank" rel="noopener noreferrer">GitHub Link</a>
+                        </li>
+                        <li>
+                            <p>Wafer Fault Detection</p>
+                            <a href="https://github.com/rachitmore/Wafer-Fault-Detection" target="_blank" rel="noopener noreferrer">GitHub Link</a>
+                        </li>
+                        <li>
+                            <p>Cement Strength Prediction</p>
+                            <a href="https://github.com/rachitmore/Cement-Strength-Prediction" target="_blank" rel="noopener noreferrer">GitHub Link</a>
+                        </li>
+                        <li>
+                            <p>Mushroom Classification</p>
+                            <a href="https://github.com/rachitmore/Mushroom-Classification-Prediction" target="_blank" rel="noopener noreferrer">GitHub Link</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="project-image">
+                    {% load static %}
+                    <img src="{% static 'images/project2.jpg' %}" alt="Machine Learning Projects">
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-info">
+                    <h2>Computer Vision Project</h2>
+                    <h3>Micro-Expression Recognition with Deep Learning</h3>                   
+                        <h4>Objective:</h4><p>Building a machine learning model to analyze micro-expressions in human faces and accurately predict subtle facial expressions.</p>
+                        <h4>Role:</h4> <p>Sole Developer, responsible for data collection, preprocessing, model development, and evaluation.</p>
+                        <h4>Technologies Used:</h4> <p>Python, TensorFlow, Pandas, Matplotlib, numpy, etc.</p>
+                        <br>
+                        <h4>Current Progress and Key Learnings:</h4>
+                        <ul>
+                            <li>Successfully collected and curated a dataset of micro-expressions from publicly available sources, ensuring diversity and representativeness.</li>
+                            <li>Completed data preprocessing, including face detection, normalization, and augmentation, to enhance the model's ability to generalize across varied facial expressions.</li>
+                            <li>Developed and fine-tuned convolutional neural networks (CNNs) using TensorFlow, achieving promising preliminary results in detecting subtle micro-expressions.</li>
+                            <li>Gained hands-on experience in using advanced deep learning techniques, such as transfer learning, to improve model accuracy with limited data.</li>
+                        </ul>
+                        <h4>Future Plans:</h4>
+                        <ul>
+                            <li>Plan to further optimize the model's performance by experimenting with different network architectures and hyperparameters.</li>
+                            <li>Implement real-time micro-expression recognition using video data and deploy the model in a web-based application for practical use.</li>
+                            <li>Explore the integration of the model with emotion recognition systems to provide more comprehensive insights into human behavior.</li>
+                        </ul>
+                    </p>
+                    <a href="https://github.com/rachitmore/Micro-Expression-Recognition-with-Deep-Learning" target="_blank" rel="noopener noreferrer">GitHub Link</a>
+                </div>
+                <div class="project-image">
+                    {% load static %}
+                    <img src="{% static 'images/project3.jpg' %}" alt="Computer Vision Project">
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-info">
+                    <h2>Natural Language Processing Project</h2>
+                    <h3>Sentiment Analysis with Deep Learning</h3>
+                    <p>______</p>
+                    <a href="https://github.com/rachitmore/Sentiment-Analysis-with-Deep-Learning" target="_blank" rel="noopener noreferrer">GitHub Link</a>
+                </div>
+                <div class="project-image">
+                    {% load static %}
+                    <img src="{% static 'images/project3.jpg' %}" alt="NLP Project">
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-info">
+                    <h2>Unsupervised Learning Project</h2>
+                    <h3>Recommender System for E-commerce</h3>
+                    <p>______</p>
+                    <a href="https://github.com/rachitmore/Recommender-System-for-E-commerce" target="_blank" rel="noopener noreferrer">GitHub Link</a>
+                </div>
+                <div class="project-image">
+                    {% load static %}
+                    <img src="{% static 'images/project3.jpg' %}" alt="Unsupervised Learning Project">
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

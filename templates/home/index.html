@@ -1,0 +1,53 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Home - Rachit More{% endblock %}
+
+{% block content %}
+<section class="intro">
+    <div class="intro-content">
+        <div class="intro-text">
+            <h1>Welcome!</h1>
+            <h2>Welcome to My Journey in Data Science and Artificial Intelligence</h2>
+            
+            <h3>Who Am I?</h3>
+            <p>Hello! I'm Rachit More, a passionate Data Science and Artificial Intelligence enthusiast with a unique background in Mechanical Engineering and Quality Control. My journey into the world of AI began during my Bachelor of Engineering in Mechanical Engineering, where an IT convention and a short-term training program on autonomous vehicles ignited my interest in AI.</p>
+            
+            <h3>My Journey</h3>
+            <h4>Mechanical Engineering Foundations</h4>
+            <p>During my undergraduate studies, I developed a strong foundation in mathematics and programming, which later proved invaluable in my AI pursuits.</p>
+            
+            <h4>Quality Control Experience</h4>
+            <p>As a Quality Control Incharge, I honed my skills in implementing and maintaining quality control procedures, monitoring production processes, and leading a team. I ensured vendor materials met the required specifications and documented inspections and tests for compliance during audits.</p>
+            
+            <h4>Transition to AI and Data Science</h4>
+            <p>My passion for AI led me to explore data science through various online resources. This profound interest compelled me to leave my job and pursue a full-time career in data science. As a Data Science Intern, I gathered and preprocessed data, conducted exploratory data analysis, developed and tested machine learning models, and contributed to open-source projects.</p>
+            
+            <h4>Current Role</h4>
+            <p>I currently work as a Technical Support Engineer at Meta Programming Technologies. In this role, I troubleshoot and resolve client issues, monitor software performance, assist in testing strategies, create technical documentation, and collaborate closely with developers to communicate client feedback effectively.</p>
+            
+            <h3>My Goals</h3>
+            <p>My goal is to continue expanding my expertise in Data Science and AI, contributing to innovative projects that make a difference. I am particularly interested in areas such as deep learning, computer vision, and AI ethics.</p>
+            
+            <h3>Let's Connect</h3>
+            <p>I am always excited to connect with fellow enthusiasts, professionals, and mentors in the Data Science and AI community. Feel free to reach out to me.</p>
+            
+            <div class="button-container">
+                <a href="{% url 'resume' %}" class="button primary-button">Resume</a>
+                <a href="{% url 'projects' %}" class="button secondary-button">Projects</a>
+            </div>
+        </div>
+        
+        <div class="profile-card">
+            {% load static %}
+            <img src="{% static 'images/profile.jpg' %}" alt="Rachit More" class="profile-pic">
+            <h3 class="profile-name">Rachit More</h3>
+            <p class="profile-title">Technical Support Engineer</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/rachit-more-30a63418a" class="social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a> 
+                <a href="https://github.com/rachitmore" class="social-link" target="_blank" rel="noopener noreferrer">GitHub</a> 
+                <a href="https://x.com/RachitMore20" class="social-link" target="_blank" rel="noopener noreferrer">Twitter</a> 
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
