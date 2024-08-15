@@ -3,7 +3,8 @@ import datetime,os,sys
 import pickle
 import pandas as pd
 import joblib
-from Pipeline.app_tracking.logger import App_Logger
+from app_tracking.logger import App_Logger
+from app_tracking.exception import AppException
 
 
 class FileOperation:

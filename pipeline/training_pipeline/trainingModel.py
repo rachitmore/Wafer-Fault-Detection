@@ -8,9 +8,9 @@ Revisions: None
 import sys
 import datetime
 import warnings
-from Pipeline.app_tracking.logger import App_Logger
-from Pipeline.app_tracking.exception import AppException
-from Pipeline.Utils.utils import FileOperation
+from app_tracking.logger import App_Logger
+from app_tracking.exception import AppException
+from utils.utils import FileOperation
 from .src.Stage1_data_ingestion.data_loader import Data_Getter
 from .src.Stage2_DataValidation.DataTypeValidation import RawDataValidation,PrePreocessedDataValidation
 from .src.Stage3_DataPreprocessing.DataTransformation import DataPreprocessing
@@ -29,22 +29,13 @@ def income_model_on_local():
     PrePreocessedDataValidation(current_time)
     ModelTraining(current_time)
     ModelEvaluation(current_time)
-
-def income_model_on_database():
-    print("Code flow start")
-    current_time = datetime.datetime.now().strftime('%Y-%m-%d %H-%M-%S')
-    Data_Getter(current_time).ingest_from_database()
-    RawDataValidation(current_time)
-    DataPreprocessing(current_time)
-    PrePreocessedDataValidation(current_time)
-    ModelTraining(current_time)
-    ModelEvaluation(current_time)
                 
 if __name__ == "__main__":
     try:
-        income_model_on_database()
+        income_model_on_local() 
     except:
-        income_model_on_local()
+        pass
+        
 
     
 
