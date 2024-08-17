@@ -10,55 +10,46 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 def home(request):
+    current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
+    logging = App_Logger(log_path)
     try:
-        current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
-        logging = App_Logger(log_path)
         logging.log("INFO", "Home page accessed.")
         return render(request, 'home/index.html')
     
     except Exception as e:
-        current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
-        logging = App_Logger(log_path)
         logging.log("ERROR", f"Error rendering home page: {str(e)}")
         raise AppException("An error occurred while rendering the home page.", str(e))
 
 def about(request):
+    current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
+    logging = App_Logger(log_path)
     try:
-        current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
-        logging = App_Logger(log_path)
         logging.log("INFO", "About page accessed.")
         return render(request, 'home/about.html')
     
     except Exception as e:
-        current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
-        logging = App_Logger(log_path)
         logging.log("ERROR", f"Error rendering about page: {str(e)}")
         raise AppException("An error occurred while rendering the about page.", str(e))
 
 def resume(request):
+    current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
+    logging = App_Logger(log_path)
     try:
-        current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
-        logging = App_Logger(log_path)
         logging.log("INFO", "Resume page accessed.")
         return render(request, 'home/resume.html')
     
     except Exception as e:
-        current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
-        logging = App_Logger(log_path)
         logging.log("ERROR", f"Error rendering resume page: {str(e)}")
         raise AppException("An error occurred while rendering the resume page.", str(e))
 
 def contact(request):
+    current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
+    logging = App_Logger(log_path)    
     try:
-        current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
-        logging = App_Logger(log_path)
         if request.method == 'POST':
             logging.log("INFO", "Contact form submission initiated.")
             form = ContactForm(request.POST)
@@ -85,38 +76,29 @@ def contact(request):
         
         return render(request, 'home/contact.html', {'form': form})
     except Exception as e:
-        current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
-        logging = App_Logger(log_path)
         logging.log("ERROR", f"Error processing contact page: {str(e)}")
         raise AppException("An error occurred on the contact page.", str(e))
 
 def success(request):
+    current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
+    logging = App_Logger(log_path)
     try:
-        current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
-        logging = App_Logger(log_path)
         logging.log("INFO", "Success page accessed.")
         return render(request, 'home/success.html')
     
     except Exception as e:
-        current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
-        logging = App_Logger(log_path)
         logging.log("ERROR", f"Error rendering success page: {str(e)}")
         raise AppException("An error occurred while rendering the success page.", str(e))
 
 def projects(request):
+    current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
+    logging = App_Logger(log_path)
     try:
-        current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
-        logging = App_Logger(log_path)
         logging.log("INFO", "Projects page accessed.")
         return render(request, 'home/projects.html')
     
     except Exception as e:
-        current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        log_path = BASE_DIR / "artifacts" / "logs" / "django" / "home_app"/f"{current_time}.txt"
-        logging = App_Logger(log_path)
         logging.log("ERROR", f"Error rendering projects page: {str(e)}")
         raise AppException("An error occurred while rendering the projects page.", str(e))
